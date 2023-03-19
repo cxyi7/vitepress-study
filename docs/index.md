@@ -2,11 +2,11 @@
 # https://vitepress.vuejs.org/reference/default-theme-home-page
 layout: home
 
-title: VitePress 中文网xxx
+title: VitePress 中文网
 titleTemplate: vite和vue相结合，更实用的静态站点生成器
 
 hero:
-  name: VitePress 中文网xx1
+  name: VitePress 中文网
   text: vite和vue相结合所创建的静态站点生成器
   tagline: 更快、更方便、更易于拓展的现代化SSG框架，你值得拥有
   actions:
