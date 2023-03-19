@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "deploy": "sh deploy.sh"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "pre-push": "^0.1.4",
     "vitepress": "^1.0.0-alpha.60",
     "vue": "^3.2.47"
-  }
+  },
+  "pre-push": [
+    "deploy"
+  ]
 }
