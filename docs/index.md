@@ -6,7 +6,7 @@ title: VitePress 中文网xxx
 titleTemplate: vite和vue相结合，更实用的静态站点生成器
 
 hero:
-  name: VitePress 中文网
+  name: VitePress 中文网xx1
   text: vite和vue相结合所创建的静态站点生成器
   tagline: 更快、更方便、更易于拓展的现代化SSG框架，你值得拥有
   actions:
