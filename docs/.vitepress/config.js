@@ -6,6 +6,7 @@ const pkg = require('vitepress/package.json');
 
 // https://vitepress.vuejs.org/reference/site-config
 export default defineConfig({
+  base: 'vitepress-study',
 
   title: 'vitePress 中文网',
   description: 'vitePress 中文站点',
