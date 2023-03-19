@@ -2,7 +2,7 @@
 # https://vitepress.vuejs.org/reference/default-theme-home-page
 layout: home
 
-title: VitePress 中文网
+title: VitePress 中文网xxx
 titleTemplate: vite和vue相结合，更实用的静态站点生成器
 
 hero:
