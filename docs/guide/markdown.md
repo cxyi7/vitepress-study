@@ -1,20 +1,20 @@
-# Markdown Extensions
+# Markdown拓展
 
-VitePress comes with built in Markdown Extensions.
+VitePress 内置了 Markdown 拓展.
 
-## Header Anchors
+## 头部锚点
 
-Headers automatically get anchor links applied. Rendering of anchors can be configured using the `markdown.anchor` option.
+头部会自动获取应用的锚点链接，可以通过`markdown.anchor`选项来配置锚点的渲染。
 
-## Links
+## 链接
 
-Both internal and external links gets special treatments.
+内外部的链接都会一视同仁，得到特殊处理。
 
-### Internal Links
+### 内部链接
 
-Internal links are converted to router link for SPA navigation. Also, every `index.md` contained in each sub-directory will automatically be converted to `index.html`, with corresponding URL `/`.
+内部的链接将会被转变为SPA导航的路由链接，当然，在每个子目录中包含的`index.md`都会转变为`index.html`，并带有相应的`/`。
 
-For example, given the following directory structure:
+比如，给出如下的目录结构：
 
 ```
 .
@@ -29,31 +29,31 @@ For example, given the following directory structure:
    └─ four.md
 ```
 
-And providing you are in `foo/one.md`:
+假设你正在`foo/one.md`中：
 
 ```md
-[Home](/) <!-- sends the user to the root index.md -->
-[foo](/foo/) <!-- sends the user to index.html of directory foo -->
-[foo heading](./#heading) <!-- anchors user to a heading in the foo index file -->
-[bar - three](../bar/three) <!-- you can omit extension -->
-[bar - three](../bar/three.md) <!-- you can append .md -->
-[bar - four](../bar/four.html) <!-- or you can append .html -->
+[Home](/) <!-- 将用户导航至根目录index.md -->
+[foo](/foo/) <!-- 将用户导航至foo下的index.html-->
+[foo heading](./#heading) <!-- 将用户导航至foo下的index文件 -->
+[bar - three](../bar/three) <!-- 可以省略文件拓展 -->
+[bar - three](../bar/three.md) <!-- 可以添加.md -->
+[bar - four](../bar/four.html) <!-- 也可以添加.html -->
 ```
 
-### Page Suffix
+### 文件后缀
 
-Pages and internal links get generated with the `.html` suffix by default.
+默认情况下，页面和内部的链接将会自动生成`.html`后缀。
 
-### External Links
+### 外部链接
 
-Outbound links automatically get `target="_blank" rel="noreferrer"`:
+外部链接将会自动设置`target="_blank" rel="noreferrer"`:
 
 - [vuejs.org](https://vuejs.org)
 - [VitePress on GitHub](https://github.com/vuejs/vitepress)
 
-## Frontmatter
+## 格式化
 
-[YAML frontmatter](https://jekyllrb.com/docs/front-matter/) is supported out of the box:
+[YAML frontmatter](https://jekyllrb.com/docs/front-matter/)能开箱即用:
 
 ```yaml
 ---
@@ -62,13 +62,13 @@ lang: en-US
 ---
 ```
 
-This data will be available to the rest of the page, along with all custom and theming components.
+这个数据对于页面其他的部分，及所有自定义和主题组件都是可用的。
 
-For more details, see [Frontmatter](/reference/frontmatter-config).
+详情请见[Frontmatter](/reference/frontmatter-config).
 
 ## GitHub-Style Tables
 
-**Input**
+**输入**
 
 ```
 | Tables        |      Are      |  Cool |
@@ -78,7 +78,7 @@ For more details, see [Frontmatter](/reference/frontmatter-config).
 | zebra stripes |   are neat    |    $1 |
 ```
 
-**Output**
+**输出**
 
 | Tables        |      Are      |   Cool |
 | ------------- | :-----------: | -----: |
@@ -88,39 +88,39 @@ For more details, see [Frontmatter](/reference/frontmatter-config).
 
 ## Emoji :tada:
 
-**Input**
+**输入**
 
 ```
 :tada: :100:
 ```
 
-**Output**
+**输出**
 
 :tada: :100:
 
-A [list of all emojis](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json) is available.
+[emojis列表](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json) is available.
 
 ## Table of Contents
 
-**Input**
+**输入**
 
 ```
 [[toc]]
 ```
 
-**Output**
+**输出**
 
 [[toc]]
 
-Rendering of the TOC can be configured using the `markdown.toc` option.
+TOC的渲染可以通过`markdown.toc`选项来设置。
 
-## Custom Containers
+## 自定义容器
 
-Custom containers can be defined by their types, titles, and contents.
+自定义容器可以通过它们的类型、标题和内容来定义。
 
-### Default Title
+### 默认的标题
 
-**Input**
+**输入**
 
 ```md
 ::: info
@@ -144,7 +144,7 @@ This is a details block.
 :::
 ```
 
-**Output**
+**输出**
 
 ::: info
 This is an info box.
@@ -166,11 +166,11 @@ This is a dangerous warning.
 This is a details block.
 :::
 
-### Custom Title
+### 自定义标题
 
-You may set custom title by appending the text right after the "type" of the container.
+你可以在容器的"type"右边追加自定义标题。
 
-**Input**
+**输入**
 
 ````md
 ::: danger STOP
@@ -184,7 +184,7 @@ console.log('Hello, VitePress!')
 :::
 ````
 
-**Output**
+**输出**
 
 ::: danger STOP
 Danger zone, do not proceed
@@ -198,9 +198,9 @@ console.log('Hello, VitePress!')
 
 ### `raw`
 
-This is a special container that can be used to prevent style and router conflicts with VitePress. This is especially useful when you're documenting component libraries. You might also wanna check out [whyframe](https://whyframe.dev/docs/integrations/vitepress) for better isolation.
+这是一个特殊的容器，可以用来防止与VitePress的样式和路由冲突，当你记录组件库是会特别有用。你可能想要知道如何更好的隔离[whyframe](https://whyframe.dev/docs/integrations/vitepress)。
 
-**Syntax**
+**语法**
 
 ```md
 ::: raw
@@ -208,17 +208,17 @@ Wraps in a <div class="vp-raw">
 :::
 ```
 
-`vp-raw` class can be directly used on elements too. Style isolation is currently opt-in:
+`vp-raw`类名可以直接使用在元素上，样式隔离也是可以使用的：
 
 ::: details
 
-- Install required deps with your preferred package manager:
+- 你可以安装下面这个作为首选包管理器：
 
   ```sh
   $ npm install -D postcss postcss-prefix-selector
   ```
 
-- Create a file named `docs/.postcssrc.cjs` and add this to it:
+- 创建一个叫`docs/.postcssrc.cjs`的文件并且添加下面代码到里面：
 
   ```js
   module.exports = {
@@ -237,11 +237,11 @@ Wraps in a <div class="vp-raw">
 
 :::
 
-## Syntax Highlighting in Code Blocks
+## 在代码块中语法高亮
 
-VitePress uses [Shiki](https://shiki.matsu.io/) to highlight language syntax in Markdown code blocks, using coloured text. Shiki supports a wide variety of programming languages. All you need to do is append a valid language alias to the beginning backticks for the code block:
+VitePress在Markdown代码块中使用[Shiki](https://shiki.matsu.io/)高亮语法，使得文本有不同的颜色。Shiki支持各种编程语法，你所需要做的就是在代码块的`旁边添加一个有效的语言别名：
 
-**Input**
+**输入**
 
 ````
 ```js
@@ -262,7 +262,7 @@ export default {
 ```
 ````
 
-**Output**
+**输出**
 
 ```js
 export default {
@@ -279,13 +279,13 @@ export default {
 </ul>
 ```
 
-A [list of valid languages](https://github.com/shikijs/shiki/blob/main/docs/languages.md) is available on Shiki's repository.
+Shiki's 仓库中包含了一个可用的[有效的语言列表](https://github.com/shikijs/shiki/blob/main/docs/languages.md)。
 
-You may also customize syntax highlight theme in app config. Please see [`markdown` options](/reference/site-config#markdown) for more details.
+你可能需要在app配置中自定义高亮语法，详情见[`markdown` options](/reference/site-config#markdown)。
 
-## Line Highlighting in Code Blocks
+## 代码块中的行高亮
 
-**Input**
+**输入**
 
 ````
 ```js{4}
@@ -299,7 +299,7 @@ export default {
 ```
 ````
 
-**Output**
+**输出**
 
 ```js{4}
 export default {
@@ -311,13 +311,13 @@ export default {
 }
 ```
 
-In addition to a single line, you can also specify multiple single lines, ranges, or both:
+除了单独的一行，你可能也需要多行或者一个范围：
 
 - Line ranges: for example `{5-8}`, `{3-10}`, `{10-17}`
 - Multiple single lines: for example `{4,7,9}`
 - Line ranges and single lines: for example `{4,7-13,16,23-27,40}`
 
-**Input**
+**输入**
 
 ````
 ```js{1,4,6-8}
@@ -335,7 +335,7 @@ export default { // Highlighted
 ```
 ````
 
-**Output**
+**输出**
 
 ```js{1,4,6-8}
 export default { // Highlighted
@@ -351,9 +351,9 @@ export default { // Highlighted
 }
 ```
 
-Alternatively, it's possible to highlight directly in the line by using the `// [!code hl]` comment.
+另外，直接在行中添加注释`// [!code hl]`也可以使其高亮：
 
-**Input**
+**输入**
 
 ````
 ```js
@@ -367,7 +367,7 @@ export default {
 ```
 ````
 
-**Output**
+**输出**
 
 ```js
 export default {
@@ -379,15 +379,15 @@ export default {
 }
 ```
 
-## Focus in Code Blocks
+## 专注于代码块
 
-Adding the `// [!code focus]` comment on a line will focus it and blur the other parts of the code.
+在行中添加注释`// [!code focus]`将会使除它以外的代码都变得模糊，使得你专注于这行代码。
 
-Additionally, you can define a number of lines to focus using `// [!code focus:<lines>]`.
+另外，你可以使用`// [!code focus:<lines>]`定义需要专注的那几行代码。
 
-**Input**
+**输入**
 
-Note that only one space is required after `!code`, here are two to prevent processing.
+注意，在`!code`后只有一个空格，应该避免出现两个。
 
 ````
 ```js
@@ -401,7 +401,7 @@ export default {
 ```
 ````
 
-**Output**
+**输出**
 
 ```js
 export default {
@@ -413,13 +413,13 @@ export default {
 }
 ```
 
-## Colored Diffs in Code Blocks
+## 代码块中的颜色差异
 
-Adding the `// [!code --]` or `// [!code ++]` comments on a line will create a diff of that line, while keeping the colors of the codeblock.
+在保持代码块颜色的同时，添加注释`// [!code --]` 或 `// [!code ++]`将会导致行出现颜色差异。
 
-**Input**
+**输入**
 
-Note that only one space is required after `!code`, here are two to prevent processing.
+注意，在`!code`后只有一个空格，应该避免出现两个。
 
 ````
 ```js
@@ -434,7 +434,7 @@ export default {
 ```
 ````
 
-**Output**
+**输出**
 
 ```js
 export default {
@@ -447,13 +447,13 @@ export default {
 }
 ```
 
-## Errors and Warnings in Code Blocks
+## 代码块中的警告和错误
 
-Adding the `// [!code warning]` or `// [!code error]` comments on a line will color it accordingly.
+在行中添加注释`// [!code warning]` 或 `// [!code error]`将会有相应的颜色变化。
 
-**Input**
+**输入**
 
-Note that only one space is required after `!code`, here are two to prevent processing.
+注意，在`!code`后只有一个空格，应该避免出现两个。
 
 ````
 ```js
@@ -468,7 +468,7 @@ export default {
 ```
 ````
 
-**Output**
+**输出**
 
 ```js
 export default {
@@ -481,9 +481,9 @@ export default {
 }
 ```
 
-## Line Numbers
+## 行号
 
-You can enable line numbers for each code blocks via config:
+你可以通过配置启用为代码块启用行号：
 
 ```js
 export default {
@@ -493,11 +493,11 @@ export default {
 }
 ```
 
-Please see [`markdown` options](/reference/site-config#markdown) for more details.
+详情见[`markdown` options](/reference/site-config#markdown)。
 
-You can add `:line-numbers` / `:no-line-numbers` mark in your fenced code blocks to override the value set in config.
+你可以添加`:line-numbers`或`:no-line-numbers` 为受保护的代码块中标记以覆盖配置中设置的值。
 
-**Input**
+**输入**
 
 ````md
 ```ts {1}
@@ -513,7 +513,7 @@ const line3 = 'This is line 3'
 ```
 ````
 
-**Output**
+**输出**
 
 ```ts {1}
 // line-numbers is disabled by default
@@ -527,21 +527,21 @@ const line2 = 'This is line 2'
 const line3 = 'This is line 3'
 ```
 
-## Import Code Snippets
+## 导入代码片段
 
-You can import code snippets from existing files via following syntax:
+你可以使用下面这个语法从现有的文件中导入代码片段：
 
 ```md
 <<< @/filepath
 ```
 
-It also supports [line highlighting](#line-highlighting-in-code-blocks):
+它也支持[行高亮](#line-highlighting-in-code-blocks):
 
 ```md
 <<< @/filepath{highlightLines}
 ```
 
-**Input**
+**输入**
 
 ```md
 <<< @/snippets/snippet.js{2}
@@ -551,17 +551,17 @@ It also supports [line highlighting](#line-highlighting-in-code-blocks):
 
 <<< @/snippets/snippet.js
 
-**Output**
+**输出**
 
 <<< @/snippets/snippet.js{2}
 
 ::: tip
-The value of `@` corresponds to the source root. By default it's the VitePress project root, unless `srcDir` is configured.
+`@`相当于根目录。默认情况下，它就是指VitePress项目的根目录，除非`srcDir`被重新配置过了。
 :::
 
-You can also use a [VS Code region](https://code.visualstudio.com/docs/editor/codebasics#_folding) to only include the corresponding part of the code file. You can provide a custom region name after a `#` following the filepath:
+你也可以使用[VS Code region](https://code.visualstudio.com/docs/editor/codebasics#_folding)用于只包含代码文件的相应部分。你可以提供一个自定义区域名字在`#`后面，像下面这个文件路径：
 
-**Input**
+**输入**
 
 ```md
 <<< @/snippets/snippet-with-region.js#snippet{1}
@@ -571,11 +571,11 @@ You can also use a [VS Code region](https://code.visualstudio.com/docs/editor/co
 
 <<< @/snippets/snippet-with-region.js
 
-**Output**
+**输出**
 
 <<< @/snippets/snippet-with-region.js#snippet{1}
 
-You can also specify the language inside the braces (`{}`) like this:
+你也可以在`{}`中指定语言，像下面这样：
 
 ```md
 <<< @/snippets/snippet.cs{c#}
@@ -589,11 +589,11 @@ You can also specify the language inside the braces (`{}`) like this:
 <<< @/snippets/snippet.cs{1,2,4-6 c#:line-numbers}
 ```
 
-This is helpful if source language cannot be inferred from your file extension.
+当文件的语言没法从你的文件拓展中自动识别时，这么做就是很有用的。
 
-## Code Groups
+## 代码组
 
-You can group multiple code blocks like this:
+你可以有多个代码块的组合，像下面这样:
 
 **Input**
 
@@ -624,7 +624,7 @@ export default config
 :::
 ````
 
-**Output**
+**输出**
 
 ::: code-group
 
@@ -651,7 +651,7 @@ export default config
 
 :::
 
-You can also [import snippets](#import-code-snippets) in code groups:
+你也可以在代码组中[导入片段](#import-code-snippets):
 
 **Input**
 
@@ -669,7 +669,7 @@ You can also [import snippets](#import-code-snippets) in code groups:
 :::
 ```
 
-**Output**
+**输出**
 
 ::: code-group
 
@@ -681,7 +681,7 @@ You can also [import snippets](#import-code-snippets) in code groups:
 
 ## Markdown File Inclusion
 
-You can include a markdown file in another markdown file like this:
+markdown文件可以相互嵌套，像下面这样：
 
 **Input**
 
@@ -718,12 +718,12 @@ Can be created using `.foorc.json`.
 ```
 
 ::: warning
-Note that this does not throw errors if your file is not present. Hence, when using this feature make sure that the contents are being rendered as expected.
+注意，如果文件不存在，这并不会抛出错误。因此，在使用此功能时，请确保内容按预期呈现。
 :::
 
-## Advanced Configuration
+## 高级配置
 
-VitePress uses [markdown-it](https://github.com/markdown-it/markdown-it) as the Markdown renderer. A lot of the extensions above are implemented via custom plugins. You can further customize the `markdown-it` instance using the `markdown` option in `.vitepress/config.js`:
+VitePress使用[markdown-it](https://github.com/markdown-it/markdown-it)来渲染Markdown。很多拓展都是通过自定义插件实现的。你可以在`.vitepress/config.js`中使用`markdown` 选项去进一步自定义`markdown-it`实例:
 
 ```js
 const anchor = require('markdown-it-anchor')
@@ -748,4 +748,4 @@ module.exports = {
 }
 ```
 
-See full list of configurable properties in [Config Reference: App Config](/reference/site-config#markdown).
+详细的配置属性参见[Config Reference: App Config](/reference/site-config#markdown).
