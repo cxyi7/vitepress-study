@@ -1,8 +1,8 @@
-# Frontmatter
+# 文件变量
 
-## Usage
+## 使用
 
-VitePress supports YAML frontmatter in all Markdown files, parsing them with [gray-matter](https://github.com/jonschlinkert/gray-matter). The frontmatter must be at the top of the Markdown file (before any elements including `<script>` tags), and must take the form of valid YAML set between triple-dashed lines. Example:
+VitePress中的所有Markdown文件都支持YAML 文件变量，并使用[gray-matter](https://github.com/jonschlinkert/gray-matter)来解析它们。 这个文件变量必须是在Markdown文件的最顶部（在任何元素之前，包括`<script>`标签）, 必须以YAML的形式且在连续横线之间，比如下面这个：
 
 ```md
 ---
@@ -11,15 +11,15 @@ editLink: true
 ---
 ```
 
-Many site or default theme config options have corresponding options in frontmatter. You can use frontmatter to override specific behavior for the current page only. For details, see [Frontmatter Config Reference](/reference/frontmatter-config).
+许多站点和默认的主题配置选项在文件变量中已经有相应的选项，你可以使用文件变量去为当前页面重写一些特殊的行为。更多详情，参见[Frontmatter Config Reference](/reference/frontmatter-config)。
 
-You can also define custom frontmatter data of your own, to be used in dynamic Vue expressions on the page.
+你也可以自定义文件变量数据，用在页面中动态的Vue表达式里。
 
-## Accessing Frontmatter Data
+## 访问 文件变量 数据
 
-Frontmatter data can be accessed via the special `$frontmatter` global variable:
+文件变量数据可以通过特殊的`$frontmatter`全局变量来访问:
 
-Here's an example of how you could use it in your Markdown file:
+这里有一个教你如何在Markdown文件中使用的例子：
 
 ```md
 ---
@@ -32,11 +32,11 @@ editLink: true
 Guide content
 ```
 
-You can also access current page's frontmatter data in `<script setup>` with the [`useData()`](/reference/runtime-api#usedata) helper.
+你也可以在`<script setup>`中借助[`useData()`](/reference/runtime-api#usedata)来访问当前页面中的文件变量。
 
-## Alternative Frontmatter Formats
+## 替代文件变量格式
 
-VitePress also supports JSON frontmatter syntax, starting and ending in curly braces:
+VitePress也支持JSON语法的文件变量，将其写在花括号中：
 
 ```json
 ---

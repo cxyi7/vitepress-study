@@ -74,7 +74,7 @@ function sidebarGuide() {
       items: [
         { text: 'Markdown拓展',link: '/guide/markdown' },
         { text: '资源处理',link: '/guide/asset-handling' },
-        { text: '格式化',link: '/guide/frontmatter' },
+        { text: '文件变量',link: '/guide/frontmatter' },
         { text: 'Markdown中使用vue',link: '/guide/using-vue' },
         { text: '国际化',link: '/guide/i18n' },
       ],

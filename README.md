@@ -5,3 +5,6 @@
 * routing.md
 * getting-started.md
 * deploy.md
+* markdown.md
+* asset-handling.md
+* frontmatter.md
