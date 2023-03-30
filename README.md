@@ -8,3 +8,4 @@
 * markdown.md
 * asset-handling.md
 * frontmatter.md
+* using-vue.md
