@@ -9,3 +9,4 @@
 * asset-handling.md
 * frontmatter.md
 * using-vue.md
+* i18n.md

@@ -140,9 +140,9 @@ This is a .md using a custom component
 :::
 
 
-## 不使用Vue
+## 禁用Vue
 
-你可以通过把它们包含在`<span>`标签中或在其他元素中使用`v-pre`指令的方式不使用Vue：
+你可以通过把它们包含在`<span>`标签中或在其他元素中使用`v-pre`指令的方式禁用Vue：
 
 **输入**
 
