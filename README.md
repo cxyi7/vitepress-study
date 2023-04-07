@@ -10,3 +10,4 @@
 * frontmatter.md
 * using-vue.md
 * i18n.md
+* custom-theme.md
