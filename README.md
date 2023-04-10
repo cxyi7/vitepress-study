@@ -13,3 +13,4 @@
 * custom-theme.md
 * extending-default-theme.md
 * data-loading.md
+* cms.md

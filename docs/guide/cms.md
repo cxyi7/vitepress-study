@@ -2,15 +2,15 @@
 outline: deep
 ---
 
-# Connecting to a CMS
+# 连接CMS
 
-## General Workflow
+## 通用的工作流程
 
-Connecting VitePress to a CMS will largely revolve around [Dynamic Routes](/guide/routing#dynamic-routes). Make sure to understand how it works before proceeding.
+连接VitePress到CMS很大程度上是围绕着[动态路由](/guide/routing#dynamic-routes)，在动手之前一定要理解它的工作原理。
 
-Since each CMS will work differently, here we can only provide a generic workflow that you will need to adapt to your specific scenario.
+每个CMS的工作都是不同的，这里只能提供一个通用的工作流程，你需要根据具体的场景进行调整。
 
-1. If your CMS requires authentication, create an `.env` file to store your API tokens and load it so:
+1. 如果你的CMS需要身份验证，创建一个`.env`文件去保存你的API tokens，然后下面这样加载：
 
     ```js
     // posts/[id].paths.js
@@ -19,7 +19,7 @@ Since each CMS will work differently, here we can only provide a generic workflo
     const env = loadEnv('', process.cwd())
     ```
 
-2. Fetch the necessary data from the CMS and format it into proper paths data:
+2. 从CMS中获取必要的数据，并将其格式化为适当的路径数据：
 
     ```js
     export default {
@@ -41,7 +41,7 @@ Since each CMS will work differently, here we can only provide a generic workflo
     }
     ```
 
-3. Render the content in the page:
+3. 在页面中渲染内容:
 
     ```md
     # {{ $params.title }}
@@ -51,6 +51,6 @@ Since each CMS will work differently, here we can only provide a generic workflo
     <!-- @content -->
     ```
 
-## Integration Guides
+## 集成指南
 
-If you have written a guide on integrating VitePress with a specific CMS, please use the "Edit this page" link below to submit it here!
+如果您已经编写了关于将VitePress与特定CMS集成的指南，请使用下面的“编辑此页”链接将其提交到这里!
