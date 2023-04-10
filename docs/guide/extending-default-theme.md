@@ -51,7 +51,7 @@ export default {
 }
 ```
 
-使用Vite之后，你也能利用Vite的[全局导入特性](https://vitejs.dev/guide/features.html#glob-import)来自动的注册组件目录。
+使用Vite之后，你也能利用Vite的[全局导入功能](https://vitejs.dev/guide/features.html#glob-import)来自动的注册组件目录。
 
 ## 布局插槽
 

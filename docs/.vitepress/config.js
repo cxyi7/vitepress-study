@@ -88,8 +88,8 @@ function sidebarGuide() {
           text: '拓展默认主题',
           link: '/guide/extending-default-theme',
         },
-        { text: 'Build-Time Data Loading',link: '/guide/data-loading' },
-        { text: 'Connecting to a CMS',link: '/guide/cms' },
+        { text: '构建时加载数据',link: '/guide/data-loading' },
+        { text: '连接CMS',link: '/guide/cms' },
       ],
     },
     {
