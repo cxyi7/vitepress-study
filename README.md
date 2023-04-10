@@ -11,3 +11,4 @@
 * using-vue.md
 * i18n.md
 * custom-theme.md
+* extending-default-theme.md
