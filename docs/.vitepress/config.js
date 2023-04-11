@@ -97,7 +97,7 @@ function sidebarGuide() {
       collapsed: false,
       items: [
         {
-          text: 'MPA Mode',
+          text: 'MPA 模式',
           link: '/guide/mpa-mode',
         },
       ],

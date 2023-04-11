@@ -14,3 +14,4 @@
 * extending-default-theme.md
 * data-loading.md
 * cms.md
+* mpa-mode.md
